@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/encuesta.css') }}"/>
+    
+    <title>
+        Healthy Mind
+    </title>
+    </head>
+    
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <img class="img-fluid posicion" src="assets/img/logo.png" alt="...">
+                <a class="navbar-brand posicion" href="#page-top">Psicología</a>
+            </div>
+            <header class="masthead">
+                <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center">
+                            <h1 class="mx-auto my-0 text-uppercase">Healthy Mind</h1>
+                            <h2 class="text-white-50 mx-auto mt-2 mb-5">Test de depresión</h2>
+                            <div class = "hr"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+    
+        <!-- Create Form -->
+        <form id="form">
+     
+            <!-- Details 
+            <div class="form-control">
+                <label for="name" id="label-name">
+                    Name
+                </label>
+     
+                <!- Input Type Text 
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your name" />
+            </div>
+      
+            <div class="form-control">
+                <label for="email" id="label-email">
+                    Email
+                </label>
+     
+                <!- Input Type Email
+                <input type="email"
+                       id="email"
+                       placeholder="Enter your email" />
+            </div>
+      
+            <div class="form-control">
+                <label for="age" id="label-age">
+                    Age
+                </label>
+     
+                <!- Input Type Text 
+                <input type="text"
+                       id="age"
+                       placeholder="Enter your age" />
+            </div>
+      
+            <div class="form-control">
+                <label for="role" id="label-role">
+                    Which option best describes you?
+                </label>
+                 
+                <!- Dropdown options 
+                <select name="role" id="role">
+                    <option value="student">Student</option>
+                    <option value="intern">Intern</option>
+                    <option value="professional">
+                        Professional
+                    </option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+      -->
+            <div class="form-control">
+                <label class="pregunta">
+                    Tristeza
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No me siento triste.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Me siento triste gran parte del tiempo</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Me siento triste todo el tiempo.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Me siento tan triste o soy tan infeliz que no puedo soportarlo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Pesimismo
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No estoy desalentado respecto de mi futuro.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Me siento más desalentado respecto de mi futuro de lo que solía estar.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">No espero que las cosas funcionen para mi.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Siento que no hay esperanza para mi futuro y que sólo puede empeorar.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Fracaso
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No me siento como un fracasado.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">He fracasado más de lo que hubiera debido.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Cuando miro hacia atrás, veo muchos fracasos.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Siento que como persona soy un fracaso total.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Pérdida de Placer
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Obtengo tanto placer como siempre por las cosas de las que disfruto.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">No disfruto tanto de las cosas como solía hacerlo.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Obtengo muy poco placer de las cosas que solía disfrutar.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">No puedo obtener ningún placer de las cosas de las que solía disfrutar.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Sentimientos de Culpa
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No me siento particularmente culpable.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Me siento culpable respecto de varias cosas que he hecho o que debería haber
+                           hecho.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Me siento bastante culpable la mayor parte del tiempo.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Me siento culpable todo el tiempo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Sentimientos de Castigo
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No siento que este siendo castigado</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Siento que tal vez pueda ser castigado.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Espero ser castigado.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Siento que estoy siendo castigado.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Disconformidad con uno mismo
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Siento acerca de mi lo mismo que siempre.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">He perdido la confianza en mí mismo.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Estoy decepcionado conmigo mismo.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">No me gusto a mí mismo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Autocrítica
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No me critico ni me culpo más de lo habitual.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Estoy más crítico conmigo mismo de lo que solía estarlo.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Me critico a mí mismo por todos mis errores.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Me culpo a mí mismo por todo lo malo que sucede.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Pensamientos o Deseos Suicidas
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No tengo ningún pensamiento de matarme.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">He tenido pensamientos de matarme, pero no lo haría.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Querría matarme.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Me mataría si tuviera la oportunidad de hacerlo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Llanto
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No lloro más de lo que solía hacerlo.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Lloro más de lo que solía hacerlo.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Lloro por cualquier pequeñez.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Siento ganas de llorar pero no puedo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Agitación
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No estoy más inquieto o tenso que lo habitual.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Me siento más inquieto o tenso que lo habitual.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Estoy tan inquieto o agitado que me es difícil quedarme quieto</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o
+                           haciendo algo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Pérdida de Interés
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No he perdido el interés en otras actividades o personas.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Estoy menos interesado que antes en otras personas o cosas.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">He perdido casi todo el interés en otras personas o cosas.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Me es difícil interesarme por algo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Indecisión
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Tomo mis propias decisiones tan bien como siempre.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Me resulta más difícil que de costumbre tomar decisiones.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Encuentro mucha más dificultad que antes para tomar decisiones.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Tengo problemas para tomar cualquier decisión.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Desvalorización
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No siento que yo no sea valioso.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">No me considero a mi mismo tan valioso y útil como solía considerarme.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Me siento menos valioso cuando me comparo con otros.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Siento que no valgo nada.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Pérdida de Energía
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Tengo tanta energía como siempre.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Tengo menos energía que la que solía tener.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">No tengo suficiente energía para hacer demasiado.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">No tengo energía suficiente para hacer nada.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Cambios en los Hábitos de Sueño
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No he experimentado ningún cambio en mis hábitos de sueño.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Duermo un poco más que lo habitual.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Duermo un poco menos que lo habitual.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Duermo mucho más que lo habitual.</input>
+                </label>
+                <label for="recommed-5">
+                    <input type="radio"
+                           id="recommed-5"
+                           name="recommed">Duermo mucho menos que lo habitual.</input>
+                </label>
+                <label for="recommed-6">
+                    <input type="radio"
+                           id="recommed-6"
+                           name="recommed">Duermo la mayor parte del día.</input>
+                </label>
+                <label for="recommed-7">
+                    <input type="radio"
+                           id="recommed-7"
+                           name="recommed">Me despierto 1-2 horas más temprano y no puedo volver a dormirme.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Irritabilidad
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No estoy tan irritable que lo habitual.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Estoy más irritable que lo habitual.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Estoy mucho más irritable que lo habitual.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Estoy irritable todo el tiempo.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Cambios en el Apetito
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No he experimentado ningún cambio en mi apetito.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Mi apetito es un poco menor que lo habitual.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Mi apetito es un poco mayor que lo habitual.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Mi apetito es mucho menor que antes.</input>
+                </label>
+                <label for="recommed-5">
+                    <input type="radio"
+                           id="recommed-5"
+                           name="recommed">Mi apetito es mucho mayor que lo habitual.</input>
+                </label>
+                <label for="recommed-6">
+                    <input type="radio"
+                           id="recommed-6"
+                           name="recommed">No tengo apetito en absoluto.</input>
+                </label>
+                <label for="recommed-7">
+                    <input type="radio"
+                           id="recommed-7"
+                           name="recommed">Quiero comer todo el día.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Dificultad de Concentración
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Puedo concentrarme tan bien como siempre.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">No puedo concentrarme tan bien como habitualmente.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Me es difícil mantener la mente en algo por mucho tiempo.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Encuentro que no puedo concentrarme en nada.</input>
+                </label>
+            </div>
+    
+            
+            <div class="form-control">
+                <label class="pregunta">
+                    Cansancio o Fatiga
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No estoy más cansado o fatigado que lo habitual.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Me fatigo o me canso más fácilmente que lo habitual.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Estoy demasiado fatigado o cansado para hacer muchas de las cosas que solía
+                           hacer.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía hacer.</input>
+                </label>
+            </div>
+    
+            <div class="form-control">
+                <label class="pregunta">
+                    Pérdida de Interés en el Sexo
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">No he notado ningún cambio reciente en mi interés por el sexo.</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Estoy menos interesado en el sexo de lo que solía estarlo.</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Estoy mucho menos interesado en el sexo.</input>
+                </label>
+                <label for="recommed-4">
+                    <input type="radio"
+                           id="recommed-4"
+                           name="recommed">He perdido completamente el interés en el sexo.</input>
+                </label>
+            </div>
+    
+    
+     <!--
+            <div class="form-control">
+                <label>Languages and Frameworks known
+                    <small>(Check all that apply)</small>
+                </label>
+                <!- Input Type Checkbox 
+                <label for="inp-1">
+                    <input type="checkbox"
+                           name="inp">C</input></label>
+                <label for="inp-2">
+                    <input type="checkbox"
+                           name="inp">C++</input></label>
+                <label for="inp-3">
+                    <input type="checkbox"
+                           name="inp">C#</input></label>
+                <label for="inp-4">
+                    <input type="checkbox"
+                           name="inp">Java</input></label>
+                <label for="inp-5">
+                    <input type="checkbox"
+                           name="inp">Python</input></label>
+                <label for="inp-6">
+                    <input type="checkbox"
+                           name="inp">JavaScript</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                           name="inp">React</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                           name="inp">Angular</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                           name="inp">Django</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                           name="inp">Spring</input></label>
+            </div>
+      
+            <div class="form-control">
+                <label for="comment">
+                    Any comments or suggestions
+                </label>
+     
+                <!- multi-line text input control 
+                <textarea name="comment" id="comment"
+                    placeholder="Enter your comment here">
+                </textarea>
+            </div>
+        --> 
+            <!-- Multi-line Text Input Control -->
+            <button id="btnAceptar" type="submit" value="submit">
+                Submit
+            </button>
+        </form>
+    </body>
+    </html>

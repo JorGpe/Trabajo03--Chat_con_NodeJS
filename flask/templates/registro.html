@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Mind - Registro</title>
+    <link rel="icon" type="image/x-icon" href="static/assets/icon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}"/>
+</head>
+<body>
+    <style>
+        .masthead{
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 35rem;
+        padding: 15rem 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../static/assets/img/registro.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        }
+    </style>
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Registro</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Es necesario registrarse para realizar el test</h2>
+                    <a class="btn btn-primary" href="#register">Registrate!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="login-box" id="register">
+        <h2>Registro</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="" required="">
+            <label>Nombre</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="" required="">
+            <label>Correo Electronico</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="" required="">
+            <label>Edad</label>
+          </div>
+          <div class="user-box">
+            <input list="gender" name="" required="">
+            <datalist id="gender">
+                <option value="Hombre"></option>
+                <option value="Mujer"></option>
+                <option value="No-Binario"></option>
+                <option value="Transexual"></option>
+                <option value="Bigenero"></option>
+                <option value="Prefiero no especificar"></option>
+                <option value=" ">Escribe tu genero...</option>
+            </datalist>
+            <label>Genero con el que te identificas</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Registrar
+          </a><a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Continuar como anonimo
+          </a>
+        </form>
+      </div>
+      <script src="static/scripts/registro.js"></script>
+</body>
+</html>
